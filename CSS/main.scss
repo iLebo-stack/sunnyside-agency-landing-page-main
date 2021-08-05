@@ -1,0 +1,302 @@
+@import "globals";
+
+.desktop_image {
+    display: none;
+}
+#home_page {
+    background-image: url(/images/mobile/image-header.jpg);
+    background-position: 0 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    h1 {
+        padding-top: 80px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 30px;
+        position: relative;
+        #menu_bar {
+            cursor: pointer; 
+        }
+        #navbar_links {
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            width: 94%;
+            top: 130px;
+            background-color: $White;
+            right: 15px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            font-weight: 600;
+            button {
+                background-color: $Yellow;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            li {
+                padding-bottom: 20px;
+            }
+            a { 
+                color: $Very-dark-grayish-blue;
+                transition: 250ms ease-in-out;
+                text-decoration: none;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+#main .picture img, #main .pic_text img {
+    width: 100%;
+    height: auto;
+}
+#main .text {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    p {
+        padding-top: 20px;
+        color: $Dark-grayish-blue;
+        font-weight: 600;
+    }
+    p span {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: black;
+    }
+}
+#main .pic_text {
+    position: relative;
+    .words {
+        text-align: center;
+        position: absolute;
+        bottom: 10%;
+        padding-left: 30px;
+        padding-right: 30px;
+        h3 {
+            padding-bottom: 20px;
+        }
+    }
+}
+#main .picture_words {
+    position: relative;
+    .up {
+        top: -5px;
+    }
+}
+#main .profiles {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    img {
+        border-radius: 50%;
+    }
+    h3 {
+        padding-bottom: 50px;
+    }
+    .profile_data {
+        padding-top: 30px;
+        .name {
+            padding-top: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        .job_position {
+            padding-bottom: 50px;
+            color: $Grayish-blue;
+            font-weight: 600;
+        }
+    }
+}
+
+#main .pic_only {
+    display: grid;
+    justify-content: center;
+    img {
+        width: 100%;
+    }
+    .first {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .second {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .third {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        position: relative;
+        top: -5px;
+    }
+    .fourth {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        position: relative;
+        top: -5px;
+    }
+}
+#footer {
+    background-color: $footer;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    top: -10px;
+    h3 {
+        font-size: 40px;
+    }
+    #footer_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        padding-top: 30px;
+        padding-bottom: 70px;
+        font-weight: 600;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    #social_handles {
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+        img {
+            cursor: pointer;
+        }
+    }
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid white;
+    border-left: 40px solid transparent;
+    z-index: 1;
+    position: absolute;
+    right: 0%;
+    top: -50px;
+}
+.Graphic {
+    color: $graphic-design-text;
+}
+.Photography {
+    color: $photography-text;
+}
+.profiles {
+    h3 {
+        color: $Dark-grayish-blue;
+        //font-weight: 600;
+    }
+}
+@media screen and (min-width: 713px) {
+    .mobile_image {
+        display: none;
+    }
+    .desktop_image {
+        display: block;
+    }
+    #home_page {
+        background-image: url(/images/desktop/image-header.jpg);
+        background-position: center;
+    }
+    #home_page #navbar {
+        align-items: center;
+        #menu_bar {
+            display: none;
+        }
+        #navbar_links {
+            display: flex;
+            background-color: unset;
+            flex-direction: row;
+            align-items: center;
+            position: unset;
+            width: unset;
+            padding: unset;
+            column-gap: 15px;
+            
+        }
+    }
+    #home_page #navbar #navbar_links {
+        button {
+            background-color: $White;
+        }
+        li {
+            padding: unset;
+        }
+        a {
+            color: $White;
+        }
+        
+    }
+    #main {
+        .box-1 {
+            @include grids();
+            grid-template-areas:
+            "text image";
+            .picture {
+                grid-area: image;
+            }
+            .text {
+                @include centering();
+            }
+        }
+        .box-2 {
+            @include grids();
+            grid-template-areas: 
+            "image text";
+            .picture {
+                grid-area: image;
+                position: relative;
+                top: 0;
+            }
+            .text {
+                @include centering();
+            }
+        }
+        .box-3 {
+            @include grids();
+            .pic_text {
+                position: relative;
+                top: 0;
+            }
+        }
+        .box-4 {
+            display: flex;
+            flex-direction: column;
+            .profile_box {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        .box-5 {
+            display: flex;
+            flex-direction: row;
+            .third, .fourth {
+                position: relative;
+                top: 0;
+            }
+        }
+    }
+}

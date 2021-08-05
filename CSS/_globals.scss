@@ -1,0 +1,32 @@
+//Primary Colors
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$graphic-design-text : hsl(167, 40%, 24%);
+$photography-text: hsl(198, 62%, 26%);
+$footer: hsl(168, 49%, 70%);
+
+//Neutral colors 
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+}
+@mixin grids {
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+}
+@mixin centering { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;    
+}
