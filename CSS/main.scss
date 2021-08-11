@@ -5,7 +5,7 @@
 }
 #home_page {
     background-image: url(/images/mobile/image-header.jpg);
-    background-position: 0 100%;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -27,19 +27,13 @@
         #menu_bar {
             cursor: pointer; 
         }
-        #navbar_links {
-            display: none;
-            list-style-type: none;
-            position: absolute;
-            width: 94%;
-            top: 130px;
-            background-color: $White;
-            right: 15px;
-            padding-top: 30px;
-            padding-bottom: 30px;
-            font-weight: 600;
+        .links ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 20px;            
             button {
-                background-color: $Yellow;
+                background-color: $White;
                 border: none;
                 padding: 15px 30px;
                 border-radius: 50px;
@@ -48,11 +42,14 @@
             }
             li {
                 padding-bottom: 20px;
+                list-style-type: none;
             }
             a { 
                 color: $Very-dark-grayish-blue;
                 transition: 250ms ease-in-out;
                 text-decoration: none;
+                color: $White;
+                font-weight: 600;
                 &:hover {
                     color: black;
                 }
@@ -209,6 +206,38 @@
         //font-weight: 600;
     }
 }
+@media screen and (max-width: 713px) {
+    #home_page #navbar .links {
+        display: none;
+        ul button {
+            background-color: $Yellow;
+        }
+        li {
+            padding: unset;
+        }
+        ul a {
+            color: #5a636c;
+            &:hover {
+                color: black
+            }
+        }        
+    }
+    #home_page #navbar .responsive {
+        background-color: $White;
+        display: block;
+        position: absolute;
+        width: 94%;
+        top: 130px;
+        right: 15px;
+    }
+    #home_page #navbar .responsive ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 248px;
+    }
+}
+
 @media screen and (min-width: 713px) {
     .mobile_image {
         display: none;
@@ -225,29 +254,6 @@
         #menu_bar {
             display: none;
         }
-        #navbar_links {
-            display: flex;
-            background-color: unset;
-            flex-direction: row;
-            align-items: center;
-            position: unset;
-            width: unset;
-            padding: unset;
-            column-gap: 15px;
-            
-        }
-    }
-    #home_page #navbar #navbar_links {
-        button {
-            background-color: $White;
-        }
-        li {
-            padding: unset;
-        }
-        a {
-            color: $White;
-        }
-        
     }
     #main {
         .box-1 {

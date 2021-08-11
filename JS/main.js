@@ -2,10 +2,10 @@ let menuBtn = document.getElementById('menu_bar');
 let links = document.getElementById('navbar_links');
 
 function menu() {
-    if (links.style.display === 'block') {
-        links.style.display = 'none';
-    } else {
-        links.style.display = 'block';
+    if (links.className === 'links') {
+        links.className = 'links ' + 'responsive';
+    }else {
+        links.className = 'links';
     }
 }
 
