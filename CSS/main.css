@@ -14,7 +14,7 @@ body {
 }
 
 #home_page {
-  background-image: url(/images/mobile/image-header.jpg);
+  background-image: url(../images/mobile/image-header.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -345,7 +345,7 @@ body {
     display: block;
   }
   #home_page {
-    background-image: url(/images/desktop/image-header.jpg);
+    background-image: url(../images/desktop/image-header.jpg);
     background-position: center;
   }
   #home_page #navbar {
