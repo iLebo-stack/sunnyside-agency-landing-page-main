@@ -17,8 +17,22 @@ $White: hsl(0, 0%, 100%);
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-size: 18px;
+}
+h2, span, h3, .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+p {
+    font-family: 'Barlow', sans-serif;
 }
 @mixin grids {
     display: grid;
@@ -30,3 +44,5 @@ body {
     justify-content: center;
     align-content: center;    
 }
+//font-family: 'Barlow', sans-serif;
+//font-family: 'Fraunces', serif;

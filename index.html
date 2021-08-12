@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="CSS/main.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -22,10 +24,10 @@
         <div id="navbar_links" class="links">
           <div id="triangle"></div>
           <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href=""><button>Contact</button></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#social_handles"><button>Contact</button></a></li>
           </ul>
         </div>
         <div id="menu_bar">
@@ -35,7 +37,7 @@
       <h1>WE ARE CREATIVES</h1>
     </div>
 
-    <div class="box-1">
+    <div class="box-1" id="services">
 
       <div class="picture">
         <img src="images/mobile/image-transform.jpg" alt="" class="mobile_image">
@@ -48,7 +50,7 @@
           <p>We are a full-service creative agency specializing in helping brands grow fast. 
   Engage your clients through compelling visuals that do most of the marketing for you.</p>
 
-  <p><span>Learn more</span></p>
+  <p><span class="yellow">Learn more</span></p>
       </div>
     </div>
 
@@ -62,7 +64,7 @@
       <div class="text">
         <h2>Stand out to the right audience</h2>
         <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-        <p><span>Learn more</span></p>
+        <p><span class="soft__red">Learn more</span></p>
       </div>
       
     </div>
@@ -86,8 +88,8 @@
       </div>
     </div>
 
-    <div class="box-4 profiles">
-      <h3>CLIENT TESTIMONIALS</h3>
+    <div class="box-4 profiles" id="about">
+      <h4>CLIENT TESTIMONIALS</h4>
       <div class="profile_box">
       <div class="testimonials">
         <img src="images/image-emily.jpg" alt="Emily">
@@ -116,7 +118,7 @@
     </div>
     </div>
 
-    <div class="box-5 pic_only">
+    <div class="box-5 pic_only" id="projects">
       <div class="just_picture first">
         <img src="images/mobile/image-gallery-milkbottles.jpg" alt="image gallery milkbottles" id="bottles" class="mobile_image">
         <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" class="desktop_image">
@@ -140,9 +142,11 @@
     <h3>sunnyside</h3>
     
     <div id="footer_links">
-      <li><a href="">About</a></li>
-      <li><a href="">Services</a></li>
-      <li><a href="">Projects</a></li>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
     </div>
     
     <div id="social_handles">
