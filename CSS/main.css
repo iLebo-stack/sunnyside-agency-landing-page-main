@@ -404,9 +404,8 @@ p {
     background-color: white;
     display: block;
     position: absolute;
-    width: 94%;
+    width: calc(100vw - 45px);
     top: 130px;
-    right: 15px;
   }
   #home_page #navbar .responsive ul {
     display: -webkit-box;
